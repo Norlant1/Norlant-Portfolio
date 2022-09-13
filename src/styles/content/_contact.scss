@@ -1,0 +1,103 @@
+@import '../utils/';
+
+.Contact-content {
+   @include flex (column,center,center);
+   margin-left: 20vw;
+   margin-right: 20vw;
+   height: 130vh;
+   background-color: #262b33;
+   padding-top: 100px;
+   padding-bottom: 100px;
+   
+   @include responsive2{
+   
+    margin-left: 10vw;
+    margin-right: 10vw;
+   }
+}
+
+
+.Contact-info {
+  @include flex(row,center,center); 
+  color: white;
+  text-align: center;
+  @include responsive2 {
+    @include flex(column,center,center);
+    row-gap: 5em;
+  }
+  
+  
+
+
+  .contact-icons {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.icons_label{
+  font-size: 15px;
+  font-weight: 300;
+  white-space: nowrap;
+  color: #8D929C;
+
+}
+
+.form{
+  padding-top: 4em;
+  color: #8D929C;
+  width: 100%;
+  min-width: 650px;
+  max-width: 730px;
+  @include responsive2 {
+    min-width: 400px;
+  }
+
+
+  .input {
+    box-sizing: border-box;
+    height: 2.8em;
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    font-style: inherit;
+    padding-left: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(94, 102, 109);
+    font-size: 14px;
+    
+    
+  
+    &.textarea {
+      width: 100%;
+      resize: vertical;
+      min-height: 10em;
+    }
+
+  }
+}
+
+
+.info-container{
+ width: 250px;
+  
+}
+
+.button {
+  width:100%;
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
+  height: 45px;
+  background-color: #FFC31D;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.footnote{
+  padding-top: 200px;
+}

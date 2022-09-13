@@ -1,0 +1,469 @@
+@import '../utils/';
+
+.main-header {
+  background: url('./styles/images/bg2.jpg') repeat;
+  background-size: 100%;
+  height: 100vh;
+
+  &.home {
+      
+ @include responsive2 {
+  background: url('./styles/images/bg2.jpg') repeat;
+  background-size: 100%;
+  height: 150vh;
+ }
+  }
+  &.other {
+     height: 50vh;
+    @include responsive2 {
+      background: url('./styles/images/bg2.jpg') no-repeat;
+      background-size: 100%;
+      height: 49vh;
+     }
+  }
+
+   
+
+}
+
+.bg-header {
+  background-color: #242a35f6;
+  width: 100%;
+  height: 100vh;
+
+  
+  &.home {
+    @include responsive2 {
+      height: 150vh;
+     }
+  }
+  &.other {
+    height: 50vh;
+    @include responsive2 {
+      height: 49vh;
+     }
+  }
+}
+.logo {
+  
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  margin-left: 5%;
+  font-size: 30px;
+ 
+}
+
+.header-bar {
+  position: fixed;
+  @include flex(row,space-between,center);
+  width: 100%;
+  height: 80px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
+  z-index: 999;
+
+  
+  
+  
+  
+  &.added {
+    background-color: #272d3a;
+  }
+
+  .navpane {
+    @include flex(column,center,center);
+    row-gap: 0.5em;
+    position: absolute;
+    color: white;
+    font-size: 0.9em;
+    width: 75%;
+    height: 10em;
+    background-color: #292d38;
+    left: 12.5%;
+    top: 80px;
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+    overflow: hidden;
+   
+
+    @include responsiveM{
+      display: none;
+    }
+ 
+
+    &-text{
+      &:hover {
+        color: #c5a345;
+        cursor: pointer;
+      }
+
+      &-active {
+        color: #c5a345;
+      }
+    }
+
+
+    &-enter {
+    
+     height: 0px;
+
+    }
+    &-enter-active {
+ 
+      height: 10em;
+      transition: height 0.5s;
+    
+    }
+
+ 
+
+    &-exit {
+      height: 10em;
+    }
+
+    &-exit-active {
+      height: 0px;
+     transition: height 0.5s;
+    }
+  
+    
+  } 
+}
+
+
+
+
+
+
+.header-text-container {
+ @include flex(row);
+ column-gap: 30px;
+ color: white;
+ font-family: 'Poppins', sans-serif;
+ margin-right: 20%;
+ @include responsive {
+  display: none;
+ }
+ 
+ 
+}
+
+.navbutton {
+  @include flex(column);
+  margin-right: 5vw;
+  row-gap: 1em;
+  cursor: pointer;
+
+
+  @include responsiveM{
+    display: none;
+  }
+
+  
+
+  &.line {
+   width: 3.5em;
+   height: 3px;
+   background-color: white;
+   border-radius: 5px;
+   transition: ease-in-out 0.3s;
+
+   &.first {
+    transform: translate(-5px, 16px) rotate(45+180deg);
+   }
+   &.second {
+    opacity: 0;
+   }
+   &.third {
+    transform: translate(-5px, -23px) rotate(-45deg-180deg);
+   }
+  }
+
+}
+
+
+
+
+.header {
+  transition: 0.3s;
+  position: relative;
+  cursor: pointer;
+  padding: 25px 0px 25px 0px;
+  
+
+
+  
+
+  &.text {
+    color: rgb(223, 181, 67);
+   
+    
+  }
+
+  &__floatingoption {
+    position: absolute;
+    height: 10em;
+    width: 180px;
+    background-color: #292d38;
+    right: -6vw;
+    bottom: -160px;  
+    box-shadow: 0px 1px 1px rgba(0, 0, 0 ,0.5);
+    @include flex(column,center);
+     
+
+    &__ul {
+      border-bottom-style: solid;
+      border-width: 1px;
+      border-color: rgb(107, 107, 107);
+      height: 100%;
+      text-align: left;
+      padding-left: 10%;
+      cursor: pointer;
+      color: white;
+      @include flex(column,center);
+  
+      &:hover {
+        color: #c5a345;
+      }
+    }
+    &__ul2{
+      
+  
+      height: 100%;
+      text-align: left;
+      padding-left: 10%;
+      cursor: pointer;
+      color: white;
+      @include flex(column,center);
+
+      &:hover {
+        color: #c5a345;
+      }
+    }
+   
+  
+    &-enter {
+   
+      opacity: 0;
+      cursor: default;
+      
+    }
+    
+    &-enter-active {
+      opacity: 0; 
+      cursor: default;
+      
+    }
+    &-enter-done {
+      opacity: 1;
+      transition: opacity 0.5s;
+      cursor: default;
+      
+    }
+     
+
+    &-exit {
+      opacity: 1;
+      cursor: default;
+      color: white;
+    }
+    &-exit-active {
+      transition: opacity .3s;
+      opacity: 0;
+      cursor: default;
+      color: white;
+    }
+  }
+}
+
+
+
+
+
+
+.header-content-container {
+  @include flex(row);
+  padding: 120px 100px 0px 100px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+
+  @include responsive{
+    padding: 120px 50px 0px 50px;
+  }
+
+  @include responsive2{
+    @include flex(column);
+    row-gap: 3em;
+    
+  }
+   
+  .left-header-content {
+    @include flex(column);
+   row-gap: 1em;
+
+
+
+   .introduction {
+     font-size: 1.2rem;
+ 
+     span {
+       color: #FFC31D;
+     }
+   }
+   .profession {
+     font-size: 3rem;
+   }
+    
+   .home-icons {
+    @include flex(row,left,center);
+    column-gap: 2em;
+    padding-top: 1em;
+    
+    .contact-me {
+      
+      background-color: white;
+      width: 100px;
+      height: 25px;
+      color: #272d3a;
+      font-weight: 600;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 8px;
+      border-color: rgb(252, 237, 210);
+      padding: 10px;
+      box-shadow: 3px 2px 2px rgba(0, 0, 0 ,0.5);
+
+      cursor: pointer;
+      
+      .spann {
+        position: absolute;
+         
+
+        &.a {
+          transform: rotate(18deg);     
+          transition: all 0.4s;    
+        }
+
+        &.b {              
+          transform: rotate(-18deg);
+          transition: all 0.2s;
+        }
+
+        &.c {        
+          transform: rotate(12deg); 
+          transition: all 0.15s;       
+        }
+
+        &.d {     
+         transform: rotate(-12deg); 
+         transition: all 0.15s;         
+        }
+
+        &.e {      
+          transform: rotate(7deg);
+          transition: all 0.1s;
+        } 
+
+        &.f {      
+          transform: rotate(-7deg);
+          transition: all 0.1s;
+        }
+
+        
+        &.g {
+          transform: rotate(3deg);
+          transition: all 0.1s;
+        }
+        &.h {
+          transform: rotate(-3deg);
+          transition: all 0.1s;
+        }
+
+        &.i{      
+          transform: rotate(0deg);
+          transition: all 0.1s;
+        
+      }
+
+       }
+
+      &:hover  {
+        color: white;
+        background-color: #272d3a;
+        box-shadow: none;
+        
+        
+      }
+  
+     }
+
+    .socialmedia-icon {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      
+      &.a {
+        transform: rotate(18deg);     
+        transition: all 0.4s;    
+      }
+
+      &.b {              
+        transform: rotate(-18deg);
+        transition: all 0.2s;
+      }
+
+      &.c {        
+        transform: rotate(12deg); 
+        transition: all 0.15s;       
+      }
+
+      &.d {     
+       transform: rotate(-12deg); 
+       transition: all 0.15s;         
+      }
+
+      &.e {      
+        transform: rotate(7deg);
+        transition: all 0.1s;
+      } 
+
+      &.f {      
+        transform: rotate(-7deg);
+        transition: all 0.1s;
+      }
+
+      
+      &.g {
+        transform: rotate(3deg);
+        transition: all 0.1s;
+      }
+      &.h {
+        transform: rotate(-3deg);
+        transition: all 0.1s;
+      }
+
+      &.i{      
+        transform: rotate(0deg);
+        transition: all 0.1s;
+      
+    }
+      
+     
+    }
+  }
+ }
+
+ .right-header-content {
+ 
+  width: 90%;
+  @include flex(auto,auto,flex-start);
+
+  .imageprofile {
+    width: 100%;
+   
+ }
+}
+
+}
+
+
