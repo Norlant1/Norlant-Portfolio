@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Norlant-Portfolio/static/css/main.637a48e4.css",
+    "main.js": "/Norlant-Portfolio/static/js/main.7a11ea18.js",
+    "static/media/bg2.jpg": "/Norlant-Portfolio/static/media/bg2.ad8e7443fbcd60d4d55d.jpg",
+    "static/media/profile.png": "/Norlant-Portfolio/static/media/profile.4f4df87f13b5dfcd74ff.png",
+    "static/media/insta-icon.png": "/Norlant-Portfolio/static/media/insta-icon.3613095c89733b91f76e.png",
+    "static/media/email.png": "/Norlant-Portfolio/static/media/email.118753b565b8e1fb273f.png",
+    "static/media/call.png": "/Norlant-Portfolio/static/media/call.91a01a0b286424470484.png",
+    "static/media/address.png": "/Norlant-Portfolio/static/media/address.c50e6b6c024eb7583f83.png",
+    "static/media/fb-icon.png": "/Norlant-Portfolio/static/media/fb-icon.7cbf48c7d2ae772e7ec7.png",
+    "static/media/twitter-icon.png": "/Norlant-Portfolio/static/media/twitter-icon.861c734aa8f872a7f1b5.png",
+    "index.html": "/Norlant-Portfolio/index.html",
+    "main.637a48e4.css.map": "/Norlant-Portfolio/static/css/main.637a48e4.css.map",
+    "main.7a11ea18.js.map": "/Norlant-Portfolio/static/js/main.7a11ea18.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.637a48e4.css",
+    "static/js/main.7a11ea18.js"
+  ]
+}
