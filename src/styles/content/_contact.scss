@@ -47,11 +47,8 @@
   padding-top: 4em;
   color: #8D929C;
   width: 100%;
-  min-width: 650px;
   max-width: 730px;
-  @include responsive2 {
-    min-width: 400px;
-  }
+  
 
 
   .input {

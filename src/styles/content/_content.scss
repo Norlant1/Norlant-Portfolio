@@ -2,23 +2,19 @@
 
 
 .main-content {
-  width: auto;
-  height: 300vh;
   @include flex(column,flex-start,center);
   row-gap: 3em;
-  padding: 0vh 7vw 0vh 7vw;
+  margin: 30vh 7vw 0vh 7vw;
 
 
   @include responsive2 {
-    padding: 20vh 7vw 0vh 7vw;
+    margin: 30vh 7vw 0vh 7vw;
   }
   
 }
   
 .main-skills-info {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  height: 70vh;
+
   column-gap: 10%;
   @include flex(row,space-evenly,flex-start);
 
@@ -45,7 +41,6 @@
 
 .home-content {
   color:white;
-  height: 200vh;
   width: 100%;
   font-size: 2rem;
   font-weight: 500;
@@ -148,23 +143,24 @@
   @include flex(column);
   height: 70vh;
   width: 100%;
-  row-gap: 3em;
   color: white;
   font-size: 2em;
 
   &-info {
     @include flex(column,flex-start,left);
-    row-gap: 1em;
 
     span {
       font-style: italic;
       color: #FFC31D;
+      margin-bottom: 2em;
     }
 
     &-text {
       color: #8D929C;
       font-size: 16px;
       font-weight: 300;
+      margin-bottom: 2em;
+      margin-top: 2em;
     }
   }
 

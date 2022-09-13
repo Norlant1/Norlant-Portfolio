@@ -29,3 +29,9 @@
     @content
   }
 }
+
+@mixin responsive4 {
+  @media (max-width:506px){
+    @content
+  }
+}
